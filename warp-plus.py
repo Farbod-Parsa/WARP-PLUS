@@ -166,28 +166,15 @@ def check_stop_key():
 while True:
     print("\n[+] MENU:")
     print("1. Start Script")
-    print("2. Set Minimum Request Interval")
-    print("3. Set Maximum Request Interval")
-    print("4. Set Referrer (User ID)")
-    print("5. Display Referral Data")
-    print("6. Exit")
+    print("2. Exit")
 
     choice = input("Enter your choice: ")
 
     if choice == '1':
         if not referrer:
-            referrer = input("Enter the Referrer (User ID): ")
+            referrer = input("Enter the Referrer (Advanced > Diagnostics > ID ): ")
         start_script()
     elif choice == '2':
-        min_interval = int(input("Enter Minimum Request Interval (seconds): "))
-    elif choice == '3':
-        max_interval = int(input("Enter Maximum Request Interval (seconds): "))
-    elif choice == '4':
-        referrer = input("Enter the Referrer (User ID): ")
-    elif choice == '5':
-        print("Referral Data:")
-        print(json.dumps(referral_data, indent=2))
-    elif choice == '6':
         print("[+] Exiting the script.")
         break
     else:
